@@ -10,6 +10,7 @@ class CicloVidaToastActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Toast.makeText(this, "Metodo OnCreate", Toast.LENGTH_SHORT).show()
         Log.e("CICLO DE VIDA", "OnCreate")
     }
 

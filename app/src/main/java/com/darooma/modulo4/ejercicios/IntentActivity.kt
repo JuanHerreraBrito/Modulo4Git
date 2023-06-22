@@ -25,7 +25,8 @@ class IntentActivity : AppCompatActivity() {
         }
 
         btUrl.setOnClickListener {
-            val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://google.com"))
+            //val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"))
+            val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.xbox.com/es-MX/"))
             startActivity(urlIntent)
         }
     }

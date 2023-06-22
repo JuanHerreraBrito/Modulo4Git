@@ -6,4 +6,108 @@
     android:layout_height="match_parent"
     tools:context=".ejercicios.SecondActivity">
 
+    <TextView
+        android:id="@+id/tvName"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+    <TextView
+        android:id="@+id/tvLastName"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+    <TextView
+        android:id="@+id/tvAge"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvLastName"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvSingle"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvAge"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvAverage"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvSingle"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvRatings"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvAverage"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvBirthdayYear"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatings"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvFriends"
+        android:text="Esto es un texto de prueba"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvBirthdayYear"
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btBack"
+        app:layout_constraintTop_toBottomOf="@id/tvFriends"
+        android:text="Regresar info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

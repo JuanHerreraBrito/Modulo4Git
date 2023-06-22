@@ -15,13 +15,13 @@
             android:name=".ejercicios.SecondActivity"
             android:exported="false" />
         <activity
+            android:name=".ejercicios.IntentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ejercicios.FirstActivity"
             android:exported="false" />
         <activity
             android:name=".ejercicios.CicloVidaToastActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ejercicios.IntentActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
