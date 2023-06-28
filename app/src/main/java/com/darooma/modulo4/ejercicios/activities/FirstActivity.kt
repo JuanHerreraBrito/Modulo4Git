@@ -1,4 +1,4 @@
-package com.darooma.modulo4.ejercicios
+package com.darooma.modulo4.ejercicios.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +19,10 @@ class FirstActivity : AppCompatActivity() {
     private val register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
         //se pueden manejar con result o con it, regularmente se agrega un nombre
         if (result.resultCode == RESULT_OK) {
-            Toast.makeText(this, "result code es: ${result.resultCode} " +
+            if(result.data?.getBooleanExtra("EXTRA_IS_ACTIVITY_BACK", false) == true){
+                onBackPressedDispatcher.onBackPressed()
+            }else{
+                Toast.makeText(this, "result code es: ${result.resultCode} " +
                     " nombre = ${result.data?.getStringExtra("EXTRA_NAME")} " +
                     " apellidos = ${result.data?.getStringExtra("EXTRA_LASTNAME")} " +
                     " edad = ${result.data?.getIntExtra("EXTRA_AGE",0)}" +
@@ -30,6 +33,7 @@ class FirstActivity : AppCompatActivity() {
                     " amigos = " + Arrays.toString(result.data?.getStringArrayExtra("EXTRA_FRIENDS"))
 
                 , Toast.LENGTH_LONG).show()
+            }
         }else{
             Toast.makeText(this, "RESULTCODE = ${result.resultCode} - CANCELLED", Toast.LENGTH_SHORT).show()
         }

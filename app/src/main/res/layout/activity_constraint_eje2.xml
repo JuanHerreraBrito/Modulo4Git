@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejercicios2.ConstraintEje2Activity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glExtra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPrimera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glSegunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVPrimera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVSegunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".70" />
+
+    <CheckBox
+        android:id="@+id/cbTieneMascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca si tienes una mascota\n (coof para ver el spinner)"
+        app:layout_constraintBottom_toTopOf="@+id/glPrimera"
+        app:layout_constraintEnd_toEndOf="@+id/glVSegunda" />
+
+    <Spinner
+        android:id="@+id/spMascotas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glVPrimera"
+        app:layout_constraintTop_toTopOf="@id/glSegunda" />
+
+    <Button
+        android:id="@+id/btnAReciclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Ir a ReciclerView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/glVSegunda"
+        app:layout_constraintStart_toStartOf="@+id/glVPrimera" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

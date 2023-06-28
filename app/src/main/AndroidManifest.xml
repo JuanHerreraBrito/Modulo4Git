@@ -12,16 +12,67 @@
         android:theme="@style/Theme.Modulo4"
         tools:targetApi="31">
         <activity
+            android:name=".tareaRegistro.RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tareaRegistro.Registro2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios2.ReciclerEje2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios2.ConstraintEje2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios2.RelativeEje2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios2.LinearEje2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.componentesGraficos.RecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.componentesGraficos.SelectionComponentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.componentesGraficos.ConstraintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.componentesGraficos.RelativeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProyectoFinal.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.componentesGraficos.LinearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.componentesGraficos.FrameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.activities.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.activities.FirstActivity"
+            android:exported="false" /> <!-- para poner comentarios command más diagonal -->
+        <!--
+<activity
             android:name=".ejercicios.SecondActivity"
+            android:parentActivityName=".ejercicios.FirstActivity"
+            android:exported="false" />
+        -->
+        <activity
+            android:name=".ejercicios.activities.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".ejercicios.IntentActivity"
+            android:name=".ejercicios.activities.IntentActivity"
             android:exported="false" />
         <activity
-            android:name=".ejercicios.FirstActivity"
+            android:name=".ejercicios.activities.CicloVidaToastActivity"
             android:exported="false" />
         <activity
-            android:name=".ejercicios.CicloVidaToastActivity"
+            android:name=".ejercicios2.FrameEje2Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

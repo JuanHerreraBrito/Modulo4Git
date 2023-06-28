@@ -1,4 +1,4 @@
-package com.darooma.modulo4.ejercicios
+package com.darooma.modulo4.ejercicios.activities
 
 import android.content.Intent
 import android.net.Uri

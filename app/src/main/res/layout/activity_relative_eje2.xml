@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejercicios2.RelativeEje2Activity">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:gravity="center_horizontal"
+        android:paddingVertical="10dp"
+        android:text="Componentes y Animales"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/ivAnimal"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tvHeader"
+        android:layout_centerInParent="true"
+        android:src="@drawable/animals" />
+
+    <EditText
+        android:id="@+id/etFavorito"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivAnimal"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@+id/btnSend"
+        android:gravity="center"
+        android:hint="Cual es tú animal Favorito" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivAnimal"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:text="Enviar"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tvParaRadioGroups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFavorito"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:text="Elige uno para continuar" />
+
+    <RadioGroup
+        android:id="@+id/rgPerroOGato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvParaRadioGroups"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPerro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Te gustan los perros?" />
+
+        <RadioButton
+            android:id="@+id/rbGato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Te gustan los gatos?" />
+    </RadioGroup>
+
+    <ImageButton
+
+        android:id="@+id/ibPerro"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/perrosiguiente"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:id="@+id/ibGato"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gatosiguiente"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.darooma.modulo4.ejercicios
+package com.darooma.modulo4.ejercicios.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

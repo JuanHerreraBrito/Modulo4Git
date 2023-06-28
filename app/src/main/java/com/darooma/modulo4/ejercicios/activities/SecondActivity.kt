@@ -1,7 +1,8 @@
-package com.darooma.modulo4.ejercicios
+package com.darooma.modulo4.ejercicios.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,9 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+
+        //se habilita para el componente de action bar (barrita de arriba)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val name = intent.getStringExtra("EXTRA_NAME")
         val lastName = intent.getStringExtra("EXTRA_LASTNAME")
@@ -52,6 +56,7 @@ class SecondActivity : AppCompatActivity() {
                 putExtra("EXTRA_RATINGS", ratings)
                 putExtra("EXTRA_BIRTHDAY_YEAR", birthdayYear)
                 putExtra("EXTRA_FRIENDS", friends)
+
             }
             //pide codigo de resultado
             setResult(RESULT_OK, returnIntent)
@@ -59,5 +64,28 @@ class SecondActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    //Se agrega metodo que llama una accion desde el boton
+    //ese item se llama home, se tiene que identificar que es ese item
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            //si es igual a este , se hace lo de "adentro"
+            android.R.id.home -> {
+                val returnIntent = Intent().apply {
+                    //se puede agregar otra cosa antes de regresar
+                    putExtra("EXTRA_IS_ACTIVITY_BACK", true)
+                }
+                //pide codigo de resultado
+                setResult(RESULT_OK, returnIntent)
+
+                //acaba con toda la actividad
+                //finish()
+                //se usa onbackpress para no matar todo
+                //onBackPressed()//recomendadod no usar metodo deprecado
+                onBackPressedDispatcher.onBackPressed()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

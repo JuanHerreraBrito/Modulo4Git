@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejercicios2.LinearEje2Activity">
+
+    <TextView
+        android:text="En los siguientes Layouts, se agregaran puntos de:"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:textSize="50sp"
+        android:layout_gravity="start"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"/>
+
+    <TextView
+        android:text="Texview, ImageView"
+        android:background="@android:color/holo_orange_light"
+        android:textColor="@color/black"
+        android:gravity="start"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"/>
+
+    <TextView
+        android:text="EditText, Button"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:text="ImageButton, Checkbox"
+        android:background="@android:color/holo_orange_light"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"/>
+
+
+    <TextView
+        android:text="RadioButton y Spinner"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@color/white"
+        android:gravity="end"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"/>
+
+    <TextView
+        android:text="En esta vista se incluyen, TextView y Button"
+        android:textSize="40sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnCallRelative"
+        android:text="Pasar a Relative Layout"
+        android:layout_gravity="bottom"
+        android:layout_weight="2"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
