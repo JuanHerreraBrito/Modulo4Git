@@ -29,7 +29,7 @@ class AnimalAdapter(private var list:List<Animal>) : RecyclerView.Adapter<Animal
 }
 
 //Necesita una implementacion de View Holder y se crea "sola"
-//hereda de recicler view
+//hereda de  recicler view
 class AnimalViewHolder(view : View) : RecyclerView.ViewHolder(view) {
     //val ivAnimal = view.findViewById<ImageView>(R.id.ivAnimal)
     val tvName = view.findViewById<TextView>(R.id.tvName)
