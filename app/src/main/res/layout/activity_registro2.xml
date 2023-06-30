@@ -6,4 +6,158 @@
     android:layout_height="match_parent"
     tools:context=".tareaRegistro.Registro2Activity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".20"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".80"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTopTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="30dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:textSize="40sp"
+        android:text="Datos Usuario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/glTop"
+        app:layout_constraintTop_toTopOf="@+id/glTopTop"
+        />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="Nombre\n completo : "
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/tvNombreDato"
+        app:layout_constraintTop_toBottomOf="@+id/glTop"
+        app:layout_constraintBottom_toTopOf="@id/tvCorreo"
+        />
+    <TextView
+        android:id="@+id/tvNombreDato"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="nombre"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/tvNombre"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/glTop"
+        app:layout_constraintBottom_toTopOf="@id/tvCorreo"
+        />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="Correo : "
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/tvCorreoDato"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        app:layout_constraintBottom_toTopOf="@id/tvSexo"
+        />
+
+    <TextView
+        android:id="@+id/tvCorreoDato"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:text="correo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/tvCorreo"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        app:layout_constraintBottom_toTopOf="@id/tvSexo"
+        />
+
+    <TextView
+        android:id="@+id/tvSexo"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="Sexo : "
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/tvSexoDato"
+        app:layout_constraintTop_toBottomOf="@+id/tvCorreo"
+        app:layout_constraintBottom_toTopOf="@id/tvPassword"
+        />
+
+    <TextView
+        android:id="@+id/tvSexoDato"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:text="sexo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/tvSexo"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/tvCorreo"
+        app:layout_constraintBottom_toTopOf="@id/tvPassword"
+        />
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Contraseña :"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/tvPasswordDato"
+        app:layout_constraintTop_toBottomOf="@+id/tvSexo"
+        app:layout_constraintBottom_toTopOf="@id/glBottom"
+        />
+
+    <TextView
+        android:id="@+id/tvPasswordDato"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:text="contraseña"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@+id/tvPassword"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/tvSexo"
+        app:layout_constraintBottom_toTopOf="@id/glBottom"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Modulo4"
         tools:targetApi="31">
         <activity
-            android:name=".tareaRegistro.RegistroActivity"
+            android:name=".ejercicios2.FrameEje2Activity"
             android:exported="false" />
         <activity
             android:name=".tareaRegistro.Registro2Activity"
@@ -72,7 +72,7 @@
             android:name=".ejercicios.activities.CicloVidaToastActivity"
             android:exported="false" />
         <activity
-            android:name=".ejercicios2.FrameEje2Activity"
+            android:name=".tareaRegistro.RegistroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
