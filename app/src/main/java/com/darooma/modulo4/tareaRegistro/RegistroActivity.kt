@@ -10,6 +10,7 @@ import android.util.Patterns
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.darooma.modulo4.R
+import com.darooma.modulo4.utils.GeneralTools
 
 
 class RegistroActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class RegistroActivity : AppCompatActivity() {
                 correo.text.isBlank() || password.text.isBlank()){
                 openWinDialog("Favor de llenar todos los campos")
                 //android:backgroundTint="@android:color/holo_red_light" //estaria bien cambiar tint
-            }else if(!isValidEmail(correo.text)){
+            }else if(!GeneralTools.isValidEmail(correo.text)){
                 openWinDialog("Favor de insertar un correo valido")
             }else if(password.text.length < 8 ){
                 openWinDialog("La contraseña es muy corta, debe contener mínimo 8 caracteres")
@@ -70,14 +71,6 @@ class RegistroActivity : AppCompatActivity() {
             dialog.dismiss()
         }
         dialog.show()
-    }
-
-    private fun isValidEmail(target: CharSequence?): Boolean {
-        if (target != null) {
-            return target.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(target).matches()
-        }else{
-            return false
-        }
     }
 
 

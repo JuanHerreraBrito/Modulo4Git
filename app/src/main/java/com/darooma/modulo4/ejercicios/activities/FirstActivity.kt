@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.darooma.modulo4.R
+import com.darooma.modulo4.ejercicios.componentesGraficos.animallist.Animal
 import java.util.*
 
 class ArrayOf<T>(t: T, t1: T, t2: T) {
@@ -52,6 +53,7 @@ class FirstActivity : AppCompatActivity() {
         btnCall.setOnClickListener {
             val calif: IntArray = intArrayOf(10, 7, 9, 8)
             val amigos = arrayOf<String>("Pedro", "Juan", "Alex")
+            val animal = Animal("Leon", "Amarillo", "https://okdiario.com/img/2019/08/10/-por-que-el-leon-es-el-rey-de-la-selva_-1-655x368.jpg")
             //se saca la clase del activity con ::
             val secondIntent = Intent(this, SecondActivity::class.java).apply {
                 putExtra("EXTRA_NAME", "Juan Jose")
@@ -62,6 +64,7 @@ class FirstActivity : AppCompatActivity() {
                 putExtra("EXTRA_RATINGS", calif)
                 putExtra("EXTRA_BIRTHDAY_YEAR", "1991".toShort())//¿Por que no funciona solo 1991?
                 putExtra("EXTRA_FRIENDS", amigos)
+                putExtra("EXTRA_ANIMAL", animal)
             }
             //startActivity(secondIntent)
             //se manda con register.launch si esperamos algo

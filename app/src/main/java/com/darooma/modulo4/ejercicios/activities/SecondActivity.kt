@@ -1,12 +1,14 @@
 package com.darooma.modulo4.ejercicios.activities
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.darooma.modulo4.R
+import com.darooma.modulo4.ejercicios.componentesGraficos.animallist.Animal
 import java.util.*
 
 class SecondActivity : AppCompatActivity() {
@@ -25,6 +27,12 @@ class SecondActivity : AppCompatActivity() {
         val ratings = intent.getIntArrayExtra("EXTRA_RATINGS")
         val birthdayYear = intent.getShortExtra("EXTRA_BIRTHDAY_YEAR", 0)
         val friends = intent.getStringArrayExtra("EXTRA_FRIENDS")
+        //val animal = intent.getSerializableExtra("EXTRA_ANIMAL") as Animal
+        val animal = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
+            intent.getSerializableExtra("EXTRA_ANIMAL", Animal::class.java)
+        }else{
+            intent.getSerializableExtra("EXTRA_ANIMAL") as Animal
+        }
 
         val tvName = findViewById<TextView>(R.id.tvName)
         val tvLastName = findViewById<TextView>(R.id.tvLastName)
@@ -35,7 +43,7 @@ class SecondActivity : AppCompatActivity() {
         val tvBirthdayYear = findViewById<TextView>(R.id.tvBirthdayYear)
         val tvFriends = findViewById<TextView>(R.id.tvFriends)
 
-        tvName.text = name
+        tvName.text = animal?.name
         tvLastName.text = lastName
         tvAge.text = "${age}"
         tvSingle.text = if (single) "Soltero/a" else "En una relación" //poner si es texto

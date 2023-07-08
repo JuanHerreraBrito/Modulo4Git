@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_monster"
+    tools:context=".PracticaFinal.HomeActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glZonaBotones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCentered"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".50"/>
+
+    <TextView
+        android:id="@+id/tvHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto Prueba"
+        android:textSize="22sp"
+        android:textColor="@color/pink_tongue_monster"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnIrALeer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Aprender a \n Leer"
+        android:backgroundTint="@color/links_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/glCentered"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glZonaBotones"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btnIrAPerfil"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Ver Perfil"
+        app:layout_constraintBottom_toTopOf="@+id/btnArmario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glCentered"
+        app:layout_constraintTop_toTopOf="@+id/glZonaBotones" />
+
+    <Button
+        android:id="@+id/btnArmario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Armario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/glCentered"
+        app:layout_constraintTop_toBottomOf="@+id/btnIrAPerfil" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

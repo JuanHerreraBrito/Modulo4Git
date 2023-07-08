@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#B1160B</color>
+    <color name="links_blue">#007786</color>
+
+    <color name="pink_tongue_monster">#E439DB</color>
+    <color name="green_monster">#5EE16A</color>
+    <color name="blue_tongue_monster">#5FB4E1</color>
+    <color name="pink_monster">#FF78ED</color>
+    <color name="links_gray">#E2E2E2</color>
+
 </resources>

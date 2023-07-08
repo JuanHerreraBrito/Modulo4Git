@@ -22,7 +22,7 @@
     <TextView
         android:text="Texview, ImageView"
         android:background="@android:color/holo_orange_light"
-        android:textColor="@color/black"
+        android:textColor="@color/red"
         android:gravity="start"
         android:textSize="30sp"
         android:layout_weight="1"

@@ -6,33 +6,50 @@ import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
 import com.darooma.modulo4.R
+import com.darooma.modulo4.databinding.ActivityLinearBinding
+import com.darooma.modulo4.databinding.ActivitySelectionComponentBinding
 
 class SelectionComponentActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivitySelectionComponentBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_selection_component)
+        //nuestro activity tiene el infrater
+        // Inflar convierte en  una view que se puede usar
+        //cuando se declara que se usaran binding, se crean por ejemplo
+        //ActivitySelectionComponentBinding que llama a el layout
+        binding = ActivitySelectionComponentBinding.inflate(layoutInflater)
 
+        setContentView(binding.root)
+
+        //setContentView(R.layout.activity_selection_component) //uso anterior
+
+        //primero de habilita binding en manifest
+       // ActivityLinearBinding
+
+        /*
+        //Uso anterior
         val cbCreditCard = findViewById<CheckBox>(R.id.cbCreditCard)
         val btnsend = findViewById<Button>(R.id.btnSend)
-        val rgSex = findViewById<RadioGroup>(R.id.rgSex)
+        val rgSex = findViewById<RadioGroup>(R.id.rgSex)*/
 
         //CHECKBOX
         //se llama cuando chambia el check, regresa el view y el booleano
         //si no se ocupa se puede poner un guion bajo (aqui se quito paremetro view)
-        cbCreditCard.setOnCheckedChangeListener { _, isChecked ->
+        binding.cbCreditCard.setOnCheckedChangeListener { _, isChecked ->
             Toast.makeText(this, "isCkeched = $isChecked", Toast.LENGTH_SHORT).show()
         }
 
         //RADIOGROUP
         //Los ids se asignan como enteros, para identificar se usa un when como sigue...
         //Se podra obtener su valor ?
-        rgSex.setOnCheckedChangeListener { _, checkedId ->
+        binding.rgSex.setOnCheckedChangeListener { _, checkedId ->
             val idName = when(checkedId){
                 R.id.rbMan -> {
-                    cbCreditCard.visibility = View.GONE
+                    binding.cbCreditCard.visibility = View.GONE
 
                 }
-                R.id.rbWoman -> cbCreditCard.visibility = View.VISIBLE
+                R.id.rbWoman -> binding.cbCreditCard.visibility = View.VISIBLE
                 else -> "Desconocido"
             }
             Toast.makeText(this, "Checked Id = $idName", Toast.LENGTH_SHORT).show()
@@ -62,13 +79,13 @@ class SelectionComponentActivity : AppCompatActivity() {
         }
 
 
-        btnsend.setOnClickListener {
+        binding.btnSend.setOnClickListener {
             //CheckBox
-            val cbStatus  = cbCreditCard.isChecked
+            val cbStatus  = binding.cbCreditCard.isChecked
             Toast.makeText(this, "isCkeched = $cbStatus", Toast.LENGTH_SHORT).show()
 
             //RadioButtons
-            val selectedRbSex = when(rgSex.checkedRadioButtonId){
+            val selectedRbSex = when(binding.rgSex.checkedRadioButtonId){
                 R.id.rbMan -> "H"
                 R.id.rbWoman -> "M"
                 else -> "Desconocido"

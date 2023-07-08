@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Modulo4"
         tools:targetApi="31">
+        <activity
+            android:name=".PracticaFinal.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.FragmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ejercicios.componentesGraficos.animallist.AnimalListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tareaRegistro.RegistroActivity"
+            android:exported="false" />
         <activity
             android:name=".ejercicios2.FrameEje2Activity"
             android:exported="false" />
@@ -42,7 +56,7 @@
             android:name=".ejercicios.componentesGraficos.RelativeActivity"
             android:exported="false" />
         <activity
-            android:name=".ProyectoFinal.LoginActivity"
+            android:name=".fragments.ParamsActivity"
             android:exported="false" />
         <activity
             android:name=".ejercicios.componentesGraficos.LinearActivity"
@@ -72,7 +86,7 @@
             android:name=".ejercicios.activities.CicloVidaToastActivity"
             android:exported="false" />
         <activity
-            android:name=".tareaRegistro.RegistroActivity"
+            android:name=".PracticaFinal.LoginRegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
